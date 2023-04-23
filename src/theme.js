@@ -1,6 +1,5 @@
 import { createContext, useState, useMemo } from "react";
 import { createTheme } from "@mui/material";
-import { typography } from "@mui/system";
 
 export const tokens = (mode) => ({
     ...(mode === "dark" ? {
@@ -19,14 +18,14 @@ export const tokens = (mode) => ({
             100: "#d0d1d5",
             200: "#a1a4ab",
             300: "#727681",
-            400: "#434957",
+            400: "#1f2a40",
             500: "#141b2d",
             600: "#101624",
             700: "#0c101b",
             800: "#080b12",
             900: "#040509"
         },
-        greenAcent: {
+        greenAccent: {
             100: "#dbf5ee",
             200: "#b7ebde",
             300: "#94e2cd",
@@ -37,7 +36,7 @@ export const tokens = (mode) => ({
             800: "#1e5245",
             900: "#0f2922"
         },
-        redAcent: {
+        redAccent: {
             100: "#f8dcdb",
             200: "#f1b9b7",
             300: "#e99592",
@@ -58,6 +57,17 @@ export const tokens = (mode) => ({
             700: "#3e4396",
             800: "#2a2d64",
             900: "#151632"
+        },
+        blueAccent: {
+            100: "#e1e2fe",
+            200: "#c3c6fd",
+            300: "#a4a9fc",
+            400: "#868dfb",
+            500: "#6870fa",
+            600: "#535ac8",
+            700: "#3e4396",
+            800: "#2a2d64",
+            900: "#151632",
         },
     } : {
         grey: {
@@ -82,7 +92,7 @@ export const tokens = (mode) => ({
             800: "#a1a4ab",
             900: "#d0d1d5",
         },
-        greenAcent: {
+        greenAccent: {
             100: "#0f2922",
             200: "#1e5245",
             300: "#2e7c67",
@@ -93,7 +103,7 @@ export const tokens = (mode) => ({
             800: "#b7ebde",
             900: "#dbf5ee",
         },
-        redAcent: {
+        redAccent: {
             100: "#2c100f",
             200: "#58201e",
             300: "#832f2c",
@@ -105,6 +115,17 @@ export const tokens = (mode) => ({
             900: "#f8dcdb",
         },
         indigo: {
+            100: "#151632",
+            200: "#2a2d64",
+            300: "#3e4396",
+            400: "#535ac8",
+            500: "#6870fa",
+            600: "#868dfb",
+            700: "#a4a9fc",
+            800: "#c3c6fd",
+            900: "#e1e2fe",
+        },
+        blueAccent: {
             100: "#151632",
             200: "#2a2d64",
             300: "#3e4396",
@@ -132,7 +153,7 @@ export const themeSettings = (mode) => {
                         main: colors.primary[500],
                     },
                     secondary: {
-                        main: colors.greenAcent[500],
+                        main: colors.greenAccent[500],
                     },
                     natural: {
                         dark: colors.grey[700],
@@ -148,7 +169,7 @@ export const themeSettings = (mode) => {
                         main: colors.primary[100],
                     },
                     secondary: {
-                        main: colors.greenAcent[500],
+                        main: colors.greenAccent[500],
                     },
                     natural: {
                         dark: colors.grey[700],
